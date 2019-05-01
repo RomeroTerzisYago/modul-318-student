@@ -30,7 +30,6 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			this.transportBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.lblVonStation = new System.Windows.Forms.Label();
 			this.txtFromStation = new System.Windows.Forms.TextBox();
 			this.cmbFromStation = new System.Windows.Forms.ComboBox();
@@ -54,13 +53,12 @@
 			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.lblDelete = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.transportBindingSource)).BeginInit();
+			this.transportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.btnMap = new System.Windows.Forms.Button();
+			this.btnDepartureBoard = new System.Windows.Forms.Button();
 			this.grpArrivalOrDepart.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.transportBindingSource)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// transportBindingSource
-			// 
-			this.transportBindingSource.DataSource = typeof(SwissTransport.Transport);
 			// 
 			// lblVonStation
 			// 
@@ -80,6 +78,7 @@
 			this.txtFromStation.Name = "txtFromStation";
 			this.txtFromStation.Size = new System.Drawing.Size(425, 27);
 			this.txtFromStation.TabIndex = 22;
+			this.txtFromStation.TextChanged += new System.EventHandler(this.OnFromTextChanged);
 			// 
 			// cmbFromStation
 			// 
@@ -100,6 +99,7 @@
 			this.txtToStation.Name = "txtToStation";
 			this.txtToStation.Size = new System.Drawing.Size(425, 27);
 			this.txtToStation.TabIndex = 24;
+			this.txtToStation.TextChanged += new System.EventHandler(this.OnTextToChanged);
 			// 
 			// cmbToStation
 			// 
@@ -146,7 +146,7 @@
 			// 
 			this.grpArrivalOrDepart.Controls.Add(this.optIsDeparture);
 			this.grpArrivalOrDepart.Controls.Add(this.optIsArrival);
-			this.grpArrivalOrDepart.Location = new System.Drawing.Point(609, 270);
+			this.grpArrivalOrDepart.Location = new System.Drawing.Point(630, 270);
 			this.grpArrivalOrDepart.Name = "grpArrivalOrDepart";
 			this.grpArrivalOrDepart.Size = new System.Drawing.Size(175, 57);
 			this.grpArrivalOrDepart.TabIndex = 41;
@@ -201,10 +201,10 @@
 			this.btnDeleteStation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteStation.BackgroundImage")));
 			this.btnDeleteStation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnDeleteStation.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnDeleteStation.Location = new System.Drawing.Point(627, 102);
+			this.btnDeleteStation.Location = new System.Drawing.Point(648, 84);
 			this.btnDeleteStation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnDeleteStation.Name = "btnDeleteStation";
-			this.btnDeleteStation.Size = new System.Drawing.Size(178, 105);
+			this.btnDeleteStation.Size = new System.Drawing.Size(124, 74);
 			this.btnDeleteStation.TabIndex = 43;
 			this.btnDeleteStation.UseVisualStyleBackColor = true;
 			this.btnDeleteStation.Click += new System.EventHandler(this.OnClickDelete);
@@ -215,7 +215,7 @@
 			this.btnSearchForConnections.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSearchForConnections.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnSearchForConnections.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSearchForConnections.Location = new System.Drawing.Point(326, 351);
+			this.btnSearchForConnections.Location = new System.Drawing.Point(152, 354);
 			this.btnSearchForConnections.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnSearchForConnections.Name = "btnSearchForConnections";
 			this.btnSearchForConnections.Size = new System.Drawing.Size(213, 47);
@@ -288,11 +288,44 @@
 			this.lblDelete.TabIndex = 47;
 			this.lblDelete.Text = "Inhalt löschen";
 			// 
+			// transportBindingSource
+			// 
+			this.transportBindingSource.DataSource = typeof(SwissTransport.Transport);
+			// 
+			// btnMap
+			// 
+			this.btnMap.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.btnMap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMap.BackgroundImage")));
+			this.btnMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnMap.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnMap.Location = new System.Drawing.Point(648, 165);
+			this.btnMap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.btnMap.Name = "btnMap";
+			this.btnMap.Size = new System.Drawing.Size(124, 82);
+			this.btnMap.TabIndex = 48;
+			this.btnMap.UseVisualStyleBackColor = false;
+			// 
+			// btnDepartureBoard
+			// 
+			this.btnDepartureBoard.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnDepartureBoard.FlatStyle = System.Windows.Forms.FlatStyle.System;
+			this.btnDepartureBoard.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDepartureBoard.Location = new System.Drawing.Point(426, 354);
+			this.btnDepartureBoard.Margin = new System.Windows.Forms.Padding(4);
+			this.btnDepartureBoard.Name = "btnDepartureBoard";
+			this.btnDepartureBoard.Size = new System.Drawing.Size(213, 47);
+			this.btnDepartureBoard.TabIndex = 49;
+			this.btnDepartureBoard.Text = "Abfahrtstafel";
+			this.btnDepartureBoard.UseVisualStyleBackColor = true;
+			this.btnDepartureBoard.Click += new System.EventHandler(this.OnClickAbfahrtTafel);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(894, 922);
+			this.Controls.Add(this.btnDepartureBoard);
+			this.Controls.Add(this.btnMap);
 			this.Controls.Add(this.lblDelete);
 			this.Controls.Add(this.lvConnections);
 			this.Controls.Add(this.lblConnections);
@@ -312,9 +345,9 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Form1";
 			this.Text = "Swisstransport Programm";
-			((System.ComponentModel.ISupportInitialize)(this.transportBindingSource)).EndInit();
 			this.grpArrivalOrDepart.ResumeLayout(false);
 			this.grpArrivalOrDepart.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.transportBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -345,6 +378,8 @@
 		private System.Windows.Forms.ColumnHeader columnHeader4;
 		private System.Windows.Forms.ColumnHeader columnHeader5;
 		private System.Windows.Forms.Label lblDelete;
+		private System.Windows.Forms.Button btnMap;
+		private System.Windows.Forms.Button btnDepartureBoard;
 	}
 }
 
