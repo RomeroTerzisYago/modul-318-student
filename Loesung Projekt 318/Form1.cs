@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SwissTransport;
-
+using System.Diagnostics;
+using System.Device.Location;
 namespace Loesung_Projekt_318
 {
 	public partial class Form1 : Form
@@ -19,9 +20,11 @@ namespace Loesung_Projekt_318
 		List<string> fromStationId = new List<string>();
 		List<Station> stationList = new List<Station>();
 		Transport transport = new Transport();
+		GeoCoordinateWatcher Watcher = null;
 		string departureTime = null;
 		string departureDate = null;
-		int isArrivalTime = 1;
+		bool isArrivalTime = true;
+		
 		#endregion
 
 		#region Initialization des Forms
@@ -33,6 +36,18 @@ namespace Loesung_Projekt_318
 		#endregion
 
 		#region Events
+
+		//Form Laden
+		private void OnFormLoad(object sender, EventArgs e)
+		{
+			//Watcher für Geolocation 
+			Watcher = new GeoCoordinateWatcher();
+
+			Watcher.StatusChanged += Watcher_StatusChanged;
+
+			Watcher.Start();
+		}
+
 		//Löschen von Eingaben in den Textboxen und inhalt von Comboxen
 		private void OnClickDelete(object sender, EventArgs e)
 		{
@@ -55,7 +70,7 @@ namespace Loesung_Projekt_318
 
 		}
 
-		//Die Geschriebene Eingabe von  From Textbox im From Combobox zeigen
+		//Die Geschriebene Eingabe von  FromTextbox im FromCombobox zeigen
 		private void OnFromTextChanged(object sender, EventArgs e)
 		{
 			cmbFromStation.Items.Clear();
@@ -69,6 +84,21 @@ namespace Loesung_Projekt_318
 			GetToStation(txtToStation.Text, cmbToStation);
 		}
 
+		//From und To Combobox Eingaben vertauschen
+		private void OnReverseClick(object sender, EventArgs e)
+		{
+			//Überprüfung ob die Combox Leer sind
+			if (cmbFromStation.Items.Count == 0 && cmbToStation.Items.Count == 0)
+				MessageBox.Show("Keine Stationen zum tauschen");
+			else
+			{
+				string FromTausch = cmbFromStation.SelectedItem.ToString();
+				txtFromStation.Text = cmbToStation.SelectedItem.ToString();
+				txtToStation.Text = FromTausch;
+				
+			}
+		}
+
 		//Abfahrt Tafel Anzeigen 
 		private void OnClickAbfahrtTafel(object sender, EventArgs e)
 		{
@@ -79,6 +109,19 @@ namespace Loesung_Projekt_318
 				abfahrtstafelForm.SetListItemView();
 				abfahrtstafelForm.ShowDialog();
 			}
+		}
+
+		//Senden von Email
+		private void OnClickSendEmail(object sender, EventArgs e)
+		{
+			var url = "mailto:Email@provider.com?Subject=Loesung%20Projekt%20318";
+			Process.Start(url);
+		}
+
+		//Map Form abrufen
+		private void OnClickOpenMap(object sender, EventArgs e)
+		{
+
 		}
 		#endregion
 
@@ -124,10 +167,10 @@ namespace Loesung_Projekt_318
 		//VerbindunG
 		private ListViewItem[] GetConnection(string fromStation, string toStation)
 		{
-			Connections ConnectionListView = transport.GetConnections(fromStation, toStation);
+			Connections ConnectionListView;
 			try
 			{
-				ConnectionListView = transport.GetConnections(fromStation, toStation);
+				ConnectionListView = transport.GetConnections(fromStation, toStation, departureTime, departureDate, isArrivalTime);
 			}
 			catch (Exception e)
 			{
@@ -143,14 +186,14 @@ namespace Loesung_Projekt_318
 				listView[i] = new ListViewItem(ConnectionListView.ConnectionList[i].From.Station.Name);
 				listView[i].SubItems.Add(ConnectionListView.ConnectionList[i].To.Station.Name);
 				listView[i].SubItems.Add(DateTime.Parse(ConnectionListView.ConnectionList[i].From.Departure).ToShortTimeString());
-			
-			}
-			if (listView == null)
-			{
-				listView[0] = new ListViewItem("Es sind keine Verbindungen vorhanden");
+				listView[i].SubItems.Add(DateTime.Parse(ConnectionListView.ConnectionList[i].To.Arrival).ToShortTimeString());
+				listView[i].SubItems.Add(TimeSpan.Parse(ConnectionListView.ConnectionList[i].Duration.Substring(3)).TotalMinutes.ToString() + " Min");
+
 			}
 			return listView;
 		}
+
+		//Stationen für Abfahrtstafel
 		public ListViewItem[] GetStationBoard(string fromStation)
 		{
 			Stations stations = new Stations();
@@ -177,13 +220,9 @@ namespace Loesung_Projekt_318
 				stationListView[i].SubItems.Add(item.To);
 				i++;
 			}
-			if (stationListView == null)
-				stationListView[0] = new ListViewItem("Keine Abfahrtstafel vorhanden");
 			return stationListView;
 		}
-
 		#endregion
-
 		#region Methoden Set und Get für Membervariablen
 		private void SetDepartureTime()
 		{
@@ -196,10 +235,26 @@ namespace Loesung_Projekt_318
 		private void SetIsArrivalTime()
 		{
 			if (optIsArrival.Checked == true)
-				isArrivalTime = 1;
+				isArrivalTime = true;
 			else if (optIsDeparture.Checked == true)
-				isArrivalTime = 0;
+				isArrivalTime = false;
+		}
+		private void Watcher_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
+		{
+			if(e.Status == GeoPositionStatus.Ready)
+			{
+				if (Watcher.Position.Location.IsUnknown)
+					MessageBox.Show("Ort konte nicht gefunden werden");
+				else
+				{
+					GeoCoordinate location = Watcher.Position.Location;
+					String XKoordinate = location.Longitude.ToString();
+					String YKoordinate = location.Latitude.ToString();
+				}
+			}
 		}
 		#endregion
+
+		
 	}
 }
