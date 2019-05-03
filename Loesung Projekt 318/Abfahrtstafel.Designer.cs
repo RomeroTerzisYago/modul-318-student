@@ -41,6 +41,7 @@
 			// 
 			this.lblStation.BackColor = System.Drawing.SystemColors.AppWorkspace;
 			this.lblStation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.lblStation.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblStation.Location = new System.Drawing.Point(13, 48);
 			this.lblStation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblStation.Name = "lblStation";
@@ -52,6 +53,7 @@
 			// lblFromStation
 			// 
 			this.lblFromStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblFromStation.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblFromStation.Location = new System.Drawing.Point(154, 48);
 			this.lblFromStation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblFromStation.Name = "lblFromStation";
@@ -61,12 +63,13 @@
 			// 
 			// btnClose
 			// 
-			this.btnClose.Location = new System.Drawing.Point(362, 449);
+			this.btnClose.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnClose.Location = new System.Drawing.Point(315, 446);
 			this.btnClose.Margin = new System.Windows.Forms.Padding(4);
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(100, 39);
+			this.btnClose.Size = new System.Drawing.Size(147, 42);
 			this.btnClose.TabIndex = 38;
-			this.btnClose.Text = "Schliessen";
+			this.btnClose.Text = "Schliesen";
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.OnClickClose);
 			// 
@@ -77,6 +80,7 @@
             this.colLine,
             this.colDeparture,
             this.colTo});
+			this.livStationboard.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.livStationboard.Location = new System.Drawing.Point(13, 90);
 			this.livStationboard.Margin = new System.Windows.Forms.Padding(4);
 			this.livStationboard.Name = "livStationboard";
@@ -104,7 +108,8 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(481, 501);
+			this.BackColor = System.Drawing.Color.IndianRed;
+			this.ClientSize = new System.Drawing.Size(504, 501);
 			this.Controls.Add(this.lblStation);
 			this.Controls.Add(this.lblFromStation);
 			this.Controls.Add(this.btnClose);

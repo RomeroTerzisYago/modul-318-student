@@ -95,6 +95,8 @@ namespace Loesung_Projekt_318
 				abfahrtstafelForm.SetListItemView();
 				abfahrtstafelForm.ShowDialog();
 			}
+			else
+				MessageBox.Show("Geben sie eine Vonstation ein");
 		}
 
 		//Senden von Email
@@ -104,11 +106,17 @@ namespace Loesung_Projekt_318
 			Process.Start(url);
 		}
 
-		//Map Form abrufen
+		//Mapabrufen
 		private void OnClickOpenMap(object sender, EventArgs e)
 		{
-			Maps mapForm = new Maps();
-			mapForm.ShowDialog();
+			string url = "https://www.google.com/maps/dir///@-0.2128512,-78.5060957,21z?hl=de-DE";
+			Process.Start(url);
+		}
+
+		//Form 1 Schliesen
+		private void OnClickClose(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 		#endregion
 
@@ -151,7 +159,7 @@ namespace Loesung_Projekt_318
 				cmbStation.SelectedIndex = 0;
 		}
 
-		//VerbindunG
+		//Verbindung
 		private ListViewItem[] GetConnection(string fromStation, string toStation)
 		{
 			Connections ConnectionListView;
@@ -183,8 +191,7 @@ namespace Loesung_Projekt_318
 		//Stationen für Abfahrtstafel
 		public ListViewItem[] GetStationBoard(string fromStation)
 		{
-			Stations stations = new Stations();
-			stations = transport.GetStations(fromStation);
+			Stations stations = transport.GetStations(fromStation);
 			string stationId = stations.StationList.First().Id;
 			StationBoardRoot stationBoard = null;
 			try
@@ -221,5 +228,7 @@ namespace Loesung_Projekt_318
 			departureDate = tpFromDate.Value.Year + "-" + tpFromDate.Value.Month + "-" + tpFromDate.Value.Day;
 		}
 		#endregion
+
+		
 	}
 }

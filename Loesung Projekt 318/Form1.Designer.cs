@@ -58,6 +58,7 @@
 			this.btnDeleteStation = new System.Windows.Forms.Button();
 			this.transportBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.lblChange = new System.Windows.Forms.Label();
+			this.btnClose = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.transportBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -324,6 +325,7 @@
 			// 
 			// btnDeleteStation
 			// 
+			this.btnDeleteStation.BackColor = System.Drawing.Color.White;
 			this.btnDeleteStation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteStation.BackgroundImage")));
 			this.btnDeleteStation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnDeleteStation.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -332,7 +334,7 @@
 			this.btnDeleteStation.Name = "btnDeleteStation";
 			this.btnDeleteStation.Size = new System.Drawing.Size(124, 74);
 			this.btnDeleteStation.TabIndex = 43;
-			this.btnDeleteStation.UseVisualStyleBackColor = true;
+			this.btnDeleteStation.UseVisualStyleBackColor = false;
 			this.btnDeleteStation.Click += new System.EventHandler(this.OnClickDelete);
 			// 
 			// lblChange
@@ -345,12 +347,25 @@
 			this.lblChange.TabIndex = 54;
 			this.lblChange.Text = "Von / Nach Tauschen";
 			// 
+			// btnClose
+			// 
+			this.btnClose.BackColor = System.Drawing.Color.White;
+			this.btnClose.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnClose.Location = new System.Drawing.Point(841, 690);
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(252, 54);
+			this.btnClose.TabIndex = 55;
+			this.btnClose.Text = "Schliesen";
+			this.btnClose.UseVisualStyleBackColor = false;
+			this.btnClose.Click += new System.EventHandler(this.OnClickClose);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.IndianRed;
-			this.ClientSize = new System.Drawing.Size(1143, 666);
+			this.ClientSize = new System.Drawing.Size(1143, 756);
+			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.lblChange);
 			this.Controls.Add(this.btnReverse);
 			this.Controls.Add(this.label2);
@@ -411,6 +426,7 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btnReverse;
 		private System.Windows.Forms.Label lblChange;
+		private System.Windows.Forms.Button btnClose;
 	}
 }
 
