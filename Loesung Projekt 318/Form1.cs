@@ -20,7 +20,6 @@ namespace Loesung_Projekt_318
 		List<string> fromStationId = new List<string>();
 		List<Station> stationList = new List<Station>();
 		Transport transport = new Transport();
-		GeoCoordinateWatcher Watcher = null;
 		string departureTime = null;
 		string departureDate = null;
 		bool isArrivalTime = true;
@@ -37,17 +36,6 @@ namespace Loesung_Projekt_318
 
 		#region Events
 
-		//Form Laden
-		private void OnFormLoad(object sender, EventArgs e)
-		{
-			//Watcher für Geolocation 
-			Watcher = new GeoCoordinateWatcher();
-
-			Watcher.StatusChanged += Watcher_StatusChanged;
-
-			Watcher.Start();
-		}
-
 		//Löschen von Eingaben in den Textboxen und inhalt von Comboxen
 		private void OnClickDelete(object sender, EventArgs e)
 		{
@@ -62,12 +50,10 @@ namespace Loesung_Projekt_318
 		//Zeigt Verbindungen in der ListView
 		private void OnClickSearchConnection(object sender, EventArgs e)
 		{
-			SetIsArrivalTime();
 			SetDepartureDate();
 			SetDepartureTime();
 			lvConnections.Items.Clear();
 			lvConnections.Items.AddRange(GetConnection(cmbFromStation.Text, cmbToStation.Text));
-
 		}
 
 		//Die Geschriebene Eingabe von  FromTextbox im FromCombobox zeigen
@@ -121,7 +107,8 @@ namespace Loesung_Projekt_318
 		//Map Form abrufen
 		private void OnClickOpenMap(object sender, EventArgs e)
 		{
-
+			Maps mapForm = new Maps();
+			mapForm.ShowDialog();
 		}
 		#endregion
 
@@ -223,6 +210,7 @@ namespace Loesung_Projekt_318
 			return stationListView;
 		}
 		#endregion
+
 		#region Methoden Set und Get für Membervariablen
 		private void SetDepartureTime()
 		{
@@ -232,29 +220,6 @@ namespace Loesung_Projekt_318
 		{
 			departureDate = tpFromDate.Value.Year + "-" + tpFromDate.Value.Month + "-" + tpFromDate.Value.Day;
 		}
-		private void SetIsArrivalTime()
-		{
-			if (optIsArrival.Checked == true)
-				isArrivalTime = true;
-			else if (optIsDeparture.Checked == true)
-				isArrivalTime = false;
-		}
-		private void Watcher_StatusChanged(object sender, GeoPositionStatusChangedEventArgs e)
-		{
-			if(e.Status == GeoPositionStatus.Ready)
-			{
-				if (Watcher.Position.Location.IsUnknown)
-					MessageBox.Show("Ort konte nicht gefunden werden");
-				else
-				{
-					GeoCoordinate location = Watcher.Position.Location;
-					String XKoordinate = location.Longitude.ToString();
-					String YKoordinate = location.Latitude.ToString();
-				}
-			}
-		}
 		#endregion
-
-		
 	}
 }

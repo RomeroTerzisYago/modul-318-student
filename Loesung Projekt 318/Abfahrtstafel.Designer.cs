@@ -55,13 +55,13 @@
 			this.lblFromStation.Location = new System.Drawing.Point(154, 48);
 			this.lblFromStation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblFromStation.Name = "lblFromStation";
-			this.lblFromStation.Size = new System.Drawing.Size(527, 25);
+			this.lblFromStation.Size = new System.Drawing.Size(298, 25);
 			this.lblFromStation.TabIndex = 39;
 			this.lblFromStation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// btnClose
 			// 
-			this.btnClose.Location = new System.Drawing.Point(582, 317);
+			this.btnClose.Location = new System.Drawing.Point(362, 449);
 			this.btnClose.Margin = new System.Windows.Forms.Padding(4);
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Size = new System.Drawing.Size(100, 39);
@@ -80,7 +80,7 @@
 			this.livStationboard.Location = new System.Drawing.Point(13, 90);
 			this.livStationboard.Margin = new System.Windows.Forms.Padding(4);
 			this.livStationboard.Name = "livStationboard";
-			this.livStationboard.Size = new System.Drawing.Size(667, 218);
+			this.livStationboard.Size = new System.Drawing.Size(439, 331);
 			this.livStationboard.TabIndex = 37;
 			this.livStationboard.UseCompatibleStateImageBehavior = false;
 			this.livStationboard.View = System.Windows.Forms.View.Details;
@@ -104,7 +104,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(695, 404);
+			this.ClientSize = new System.Drawing.Size(481, 501);
 			this.Controls.Add(this.lblStation);
 			this.Controls.Add(this.lblFromStation);
 			this.Controls.Add(this.btnClose);

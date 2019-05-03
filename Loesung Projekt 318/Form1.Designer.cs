@@ -38,9 +38,6 @@
 			this.lblNachStation = new System.Windows.Forms.Label();
 			this.lblDatum = new System.Windows.Forms.Label();
 			this.tpFromDate = new System.Windows.Forms.DateTimePicker();
-			this.grpArrivalOrDepart = new System.Windows.Forms.GroupBox();
-			this.optIsDeparture = new System.Windows.Forms.RadioButton();
-			this.optIsArrival = new System.Windows.Forms.RadioButton();
 			this.lblZeit = new System.Windows.Forms.Label();
 			this.tpFromTime = new System.Windows.Forms.DateTimePicker();
 			this.btnSearchForConnections = new System.Windows.Forms.Button();
@@ -60,7 +57,7 @@
 			this.btnMap = new System.Windows.Forms.Button();
 			this.btnDeleteStation = new System.Windows.Forms.Button();
 			this.transportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.grpArrivalOrDepart.SuspendLayout();
+			this.lblChange = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.transportBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -68,7 +65,7 @@
 			// 
 			this.lblVonStation.AutoSize = true;
 			this.lblVonStation.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblVonStation.Location = new System.Drawing.Point(60, 55);
+			this.lblVonStation.Location = new System.Drawing.Point(54, 35);
 			this.lblVonStation.Name = "lblVonStation";
 			this.lblVonStation.Size = new System.Drawing.Size(53, 24);
 			this.lblVonStation.TabIndex = 21;
@@ -77,7 +74,7 @@
 			// txtFromStation
 			// 
 			this.txtFromStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-			this.txtFromStation.Location = new System.Drawing.Point(126, 55);
+			this.txtFromStation.Location = new System.Drawing.Point(126, 32);
 			this.txtFromStation.Margin = new System.Windows.Forms.Padding(4);
 			this.txtFromStation.Name = "txtFromStation";
 			this.txtFromStation.Size = new System.Drawing.Size(425, 27);
@@ -89,7 +86,7 @@
 			this.cmbFromStation.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.cmbFromStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbFromStation.FormattingEnabled = true;
-			this.cmbFromStation.Location = new System.Drawing.Point(126, 102);
+			this.cmbFromStation.Location = new System.Drawing.Point(126, 81);
 			this.cmbFromStation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.cmbFromStation.Name = "cmbFromStation";
 			this.cmbFromStation.Size = new System.Drawing.Size(425, 28);
@@ -98,7 +95,7 @@
 			// txtToStation
 			// 
 			this.txtToStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-			this.txtToStation.Location = new System.Drawing.Point(126, 165);
+			this.txtToStation.Location = new System.Drawing.Point(126, 138);
 			this.txtToStation.Margin = new System.Windows.Forms.Padding(4);
 			this.txtToStation.Name = "txtToStation";
 			this.txtToStation.Size = new System.Drawing.Size(425, 27);
@@ -109,7 +106,7 @@
 			// 
 			this.cmbToStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbToStation.FormattingEnabled = true;
-			this.cmbToStation.Location = new System.Drawing.Point(126, 200);
+			this.cmbToStation.Location = new System.Drawing.Point(126, 182);
 			this.cmbToStation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.cmbToStation.Name = "cmbToStation";
 			this.cmbToStation.Size = new System.Drawing.Size(425, 28);
@@ -119,7 +116,7 @@
 			// 
 			this.lblNachStation.AutoSize = true;
 			this.lblNachStation.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblNachStation.Location = new System.Drawing.Point(54, 169);
+			this.lblNachStation.Location = new System.Drawing.Point(48, 138);
 			this.lblNachStation.Name = "lblNachStation";
 			this.lblNachStation.Size = new System.Drawing.Size(71, 24);
 			this.lblNachStation.TabIndex = 25;
@@ -129,7 +126,7 @@
 			// 
 			this.lblDatum.AutoSize = true;
 			this.lblDatum.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDatum.Location = new System.Drawing.Point(37, 316);
+			this.lblDatum.Location = new System.Drawing.Point(41, 272);
 			this.lblDatum.Name = "lblDatum";
 			this.lblDatum.Size = new System.Drawing.Size(66, 19);
 			this.lblDatum.TabIndex = 32;
@@ -140,51 +137,17 @@
 			this.tpFromDate.Checked = false;
 			this.tpFromDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.tpFromDate.Location = new System.Drawing.Point(126, 310);
+			this.tpFromDate.Location = new System.Drawing.Point(133, 260);
 			this.tpFromDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.tpFromDate.Name = "tpFromDate";
 			this.tpFromDate.Size = new System.Drawing.Size(212, 27);
 			this.tpFromDate.TabIndex = 33;
 			// 
-			// grpArrivalOrDepart
-			// 
-			this.grpArrivalOrDepart.Controls.Add(this.optIsDeparture);
-			this.grpArrivalOrDepart.Controls.Add(this.optIsArrival);
-			this.grpArrivalOrDepart.Location = new System.Drawing.Point(126, 242);
-			this.grpArrivalOrDepart.Name = "grpArrivalOrDepart";
-			this.grpArrivalOrDepart.Size = new System.Drawing.Size(425, 57);
-			this.grpArrivalOrDepart.TabIndex = 41;
-			this.grpArrivalOrDepart.TabStop = false;
-			// 
-			// optIsDeparture
-			// 
-			this.optIsDeparture.AutoSize = true;
-			this.optIsDeparture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.optIsDeparture.Location = new System.Drawing.Point(256, 21);
-			this.optIsDeparture.Name = "optIsDeparture";
-			this.optIsDeparture.Size = new System.Drawing.Size(103, 29);
-			this.optIsDeparture.TabIndex = 1;
-			this.optIsDeparture.TabStop = true;
-			this.optIsDeparture.Text = "Abfahrt";
-			this.optIsDeparture.UseVisualStyleBackColor = true;
-			// 
-			// optIsArrival
-			// 
-			this.optIsArrival.AutoSize = true;
-			this.optIsArrival.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.optIsArrival.Location = new System.Drawing.Point(51, 21);
-			this.optIsArrival.Name = "optIsArrival";
-			this.optIsArrival.Size = new System.Drawing.Size(107, 29);
-			this.optIsArrival.TabIndex = 0;
-			this.optIsArrival.TabStop = true;
-			this.optIsArrival.Text = "Ankunft";
-			this.optIsArrival.UseVisualStyleBackColor = true;
-			// 
 			// lblZeit
 			// 
 			this.lblZeit.AutoSize = true;
 			this.lblZeit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblZeit.Location = new System.Drawing.Point(358, 316);
+			this.lblZeit.Location = new System.Drawing.Point(357, 263);
 			this.lblZeit.Name = "lblZeit";
 			this.lblZeit.Size = new System.Drawing.Size(51, 24);
 			this.lblZeit.TabIndex = 40;
@@ -195,7 +158,7 @@
 			this.tpFromTime.Checked = false;
 			this.tpFromTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tpFromTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-			this.tpFromTime.Location = new System.Drawing.Point(415, 313);
+			this.tpFromTime.Location = new System.Drawing.Point(414, 260);
 			this.tpFromTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.tpFromTime.Name = "tpFromTime";
 			this.tpFromTime.ShowUpDown = true;
@@ -208,7 +171,7 @@
 			this.btnSearchForConnections.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSearchForConnections.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnSearchForConnections.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSearchForConnections.Location = new System.Drawing.Point(126, 370);
+			this.btnSearchForConnections.Location = new System.Drawing.Point(126, 350);
 			this.btnSearchForConnections.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnSearchForConnections.Name = "btnSearchForConnections";
 			this.btnSearchForConnections.Size = new System.Drawing.Size(219, 47);
@@ -278,7 +241,7 @@
 			// 
 			this.lblDelete.AutoSize = true;
 			this.lblDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDelete.Location = new System.Drawing.Point(859, 32);
+			this.lblDelete.Location = new System.Drawing.Point(849, 36);
 			this.lblDelete.Name = "lblDelete";
 			this.lblDelete.Size = new System.Drawing.Size(140, 24);
 			this.lblDelete.TabIndex = 47;
@@ -290,7 +253,7 @@
 			this.btnDepartureBoard.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnDepartureBoard.FlatStyle = System.Windows.Forms.FlatStyle.System;
 			this.btnDepartureBoard.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDepartureBoard.Location = new System.Drawing.Point(415, 370);
+			this.btnDepartureBoard.Location = new System.Drawing.Point(414, 350);
 			this.btnDepartureBoard.Margin = new System.Windows.Forms.Padding(4);
 			this.btnDepartureBoard.Name = "btnDepartureBoard";
 			this.btnDepartureBoard.Size = new System.Drawing.Size(149, 47);
@@ -303,7 +266,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(861, 156);
+			this.label1.Location = new System.Drawing.Point(645, 223);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(130, 24);
 			this.label1.TabIndex = 51;
@@ -313,7 +276,7 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(859, 288);
+			this.label2.Location = new System.Drawing.Point(849, 223);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(138, 24);
 			this.label2.TabIndex = 52;
@@ -321,13 +284,14 @@
 			// 
 			// btnReverse
 			// 
+			this.btnReverse.BackColor = System.Drawing.Color.White;
 			this.btnReverse.BackgroundImage = global::Loesung_Projekt_318.Properties.Resources.reverse;
 			this.btnReverse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnReverse.Location = new System.Drawing.Point(601, 84);
+			this.btnReverse.Location = new System.Drawing.Point(635, 81);
 			this.btnReverse.Name = "btnReverse";
-			this.btnReverse.Size = new System.Drawing.Size(187, 190);
+			this.btnReverse.Size = new System.Drawing.Size(128, 74);
 			this.btnReverse.TabIndex = 53;
-			this.btnReverse.UseVisualStyleBackColor = true;
+			this.btnReverse.UseVisualStyleBackColor = false;
 			this.btnReverse.Click += new System.EventHandler(this.OnReverseClick);
 			// 
 			// btnMail
@@ -336,7 +300,7 @@
 			this.btnMail.BackgroundImage = global::Loesung_Projekt_318.Properties.Resources.icons8_secured_letter_100;
 			this.btnMail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnMail.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnMail.Location = new System.Drawing.Point(863, 316);
+			this.btnMail.Location = new System.Drawing.Point(853, 272);
 			this.btnMail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnMail.Name = "btnMail";
 			this.btnMail.Size = new System.Drawing.Size(124, 82);
@@ -350,7 +314,7 @@
 			this.btnMap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMap.BackgroundImage")));
 			this.btnMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnMap.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnMap.Location = new System.Drawing.Point(863, 182);
+			this.btnMap.Location = new System.Drawing.Point(651, 272);
 			this.btnMap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnMap.Name = "btnMap";
 			this.btnMap.Size = new System.Drawing.Size(124, 82);
@@ -363,7 +327,7 @@
 			this.btnDeleteStation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteStation.BackgroundImage")));
 			this.btnDeleteStation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.btnDeleteStation.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnDeleteStation.Location = new System.Drawing.Point(863, 58);
+			this.btnDeleteStation.Location = new System.Drawing.Point(865, 81);
 			this.btnDeleteStation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnDeleteStation.Name = "btnDeleteStation";
 			this.btnDeleteStation.Size = new System.Drawing.Size(124, 74);
@@ -371,12 +335,23 @@
 			this.btnDeleteStation.UseVisualStyleBackColor = true;
 			this.btnDeleteStation.Click += new System.EventHandler(this.OnClickDelete);
 			// 
+			// lblChange
+			// 
+			this.lblChange.AutoSize = true;
+			this.lblChange.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblChange.Location = new System.Drawing.Point(602, 36);
+			this.lblChange.Name = "lblChange";
+			this.lblChange.Size = new System.Drawing.Size(210, 24);
+			this.lblChange.TabIndex = 54;
+			this.lblChange.Text = "Von / Nach Tauschen";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.IndianRed;
 			this.ClientSize = new System.Drawing.Size(1143, 666);
+			this.Controls.Add(this.lblChange);
 			this.Controls.Add(this.btnReverse);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -388,7 +363,6 @@
 			this.Controls.Add(this.lblConnections);
 			this.Controls.Add(this.btnSearchForConnections);
 			this.Controls.Add(this.btnDeleteStation);
-			this.Controls.Add(this.grpArrivalOrDepart);
 			this.Controls.Add(this.lblZeit);
 			this.Controls.Add(this.tpFromTime);
 			this.Controls.Add(this.tpFromDate);
@@ -402,9 +376,6 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Form1";
 			this.Text = "Swisstransport Programm";
-			this.Load += new System.EventHandler(this.OnFormLoad);
-			this.grpArrivalOrDepart.ResumeLayout(false);
-			this.grpArrivalOrDepart.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.transportBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -421,9 +392,6 @@
 		private System.Windows.Forms.Label lblNachStation;
 		private System.Windows.Forms.Label lblDatum;
 		private System.Windows.Forms.DateTimePicker tpFromDate;
-		private System.Windows.Forms.GroupBox grpArrivalOrDepart;
-		private System.Windows.Forms.RadioButton optIsDeparture;
-		private System.Windows.Forms.RadioButton optIsArrival;
 		private System.Windows.Forms.Label lblZeit;
 		private System.Windows.Forms.DateTimePicker tpFromTime;
 		private System.Windows.Forms.Button btnDeleteStation;
@@ -442,6 +410,7 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btnReverse;
+		private System.Windows.Forms.Label lblChange;
 	}
 }
 
