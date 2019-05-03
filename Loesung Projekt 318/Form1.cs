@@ -99,10 +99,13 @@ namespace Loesung_Projekt_318
 		//Senden von Email
 		private void OnClickSendEmail(object sender, EventArgs e)
 		{
+			lblReminder.Text = "Vergesen Sie nicht eine verbindung aus zu wählen";
 			if (lvConnections.Items.Count != 0)
 			{
+				
 				ListViewItem ItemMail = lvConnections.SelectedItems[0];
 				string MailBody = null;
+
 			
 				for (int i = 0; i <= ItemMail.SubItems.Count - 1; i++)
 				{
@@ -113,16 +116,6 @@ namespace Loesung_Projekt_318
 			}
 			else
 				MessageBox.Show("Bitte wählen sie eine Verbindung");
-		}
-
-		//Selektierte Station wird im Textbox eingegeben für Autocomplete modus
-		private void SelectedFromStation(object sender, EventArgs e)
-		{
-			txtFromStation.Text = cmbFromStation.GetItemText(cmbFromStation.SelectedItem);
-		}
-		private void OnSelectedToStation(object sender, EventArgs e)
-		{
-			txtToStation.Text = cmbToStation.GetItemText(cmbToStation.SelectedItem);
 		}
 
 		//Mapabrufen

@@ -59,6 +59,7 @@
 			this.btnMap = new System.Windows.Forms.Button();
 			this.btnDeleteStation = new System.Windows.Forms.Button();
 			this.transportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.lblReminder = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.transportBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -75,11 +76,10 @@
 			// 
 			// cmbFromStation
 			// 
-			resources.ApplyResources(this.cmbFromStation, "cmbFromStation");
 			this.cmbFromStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			resources.ApplyResources(this.cmbFromStation, "cmbFromStation");
 			this.cmbFromStation.FormattingEnabled = true;
 			this.cmbFromStation.Name = "cmbFromStation";
-			this.cmbFromStation.SelectedIndexChanged += new System.EventHandler(this.SelectedFromStation);
 			// 
 			// txtToStation
 			// 
@@ -89,11 +89,10 @@
 			// 
 			// cmbToStation
 			// 
-			resources.ApplyResources(this.cmbToStation, "cmbToStation");
 			this.cmbToStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			resources.ApplyResources(this.cmbToStation, "cmbToStation");
 			this.cmbToStation.FormattingEnabled = true;
 			this.cmbToStation.Name = "cmbToStation";
-			this.cmbToStation.SelectedIndexChanged += new System.EventHandler(this.OnSelectedToStation);
 			// 
 			// lblNachStation
 			// 
@@ -107,8 +106,8 @@
 			// 
 			// tpFromDate
 			// 
-			resources.ApplyResources(this.tpFromDate, "tpFromDate");
 			this.tpFromDate.Checked = false;
+			resources.ApplyResources(this.tpFromDate, "tpFromDate");
 			this.tpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
 			this.tpFromDate.Name = "tpFromDate";
 			// 
@@ -119,31 +118,30 @@
 			// 
 			// tpFromTime
 			// 
-			resources.ApplyResources(this.tpFromTime, "tpFromTime");
 			this.tpFromTime.Checked = false;
+			resources.ApplyResources(this.tpFromTime, "tpFromTime");
 			this.tpFromTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
 			this.tpFromTime.Name = "tpFromTime";
 			this.tpFromTime.ShowUpDown = true;
 			// 
 			// btnSearchForConnections
 			// 
-			resources.ApplyResources(this.btnSearchForConnections, "btnSearchForConnections");
 			this.btnSearchForConnections.BackColor = System.Drawing.Color.White;
 			this.btnSearchForConnections.Cursor = System.Windows.Forms.Cursors.Hand;
+			resources.ApplyResources(this.btnSearchForConnections, "btnSearchForConnections");
 			this.btnSearchForConnections.Name = "btnSearchForConnections";
 			this.btnSearchForConnections.UseVisualStyleBackColor = false;
 			this.btnSearchForConnections.Click += new System.EventHandler(this.OnClickSearchConnection);
 			// 
 			// lblConnections
 			// 
-			resources.ApplyResources(this.lblConnections, "lblConnections");
 			this.lblConnections.BackColor = System.Drawing.SystemColors.AppWorkspace;
 			this.lblConnections.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			resources.ApplyResources(this.lblConnections, "lblConnections");
 			this.lblConnections.Name = "lblConnections";
 			// 
 			// lvConnections
 			// 
-			resources.ApplyResources(this.lvConnections, "lvConnections");
 			this.lvConnections.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.lvConnections.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.lvConnections.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -152,6 +150,7 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5});
+			resources.ApplyResources(this.lvConnections, "lvConnections");
 			this.lvConnections.FullRowSelect = true;
 			this.lvConnections.Name = "lvConnections";
 			this.lvConnections.TileSize = new System.Drawing.Size(168, 30);
@@ -185,9 +184,9 @@
 			// 
 			// btnDepartureBoard
 			// 
-			resources.ApplyResources(this.btnDepartureBoard, "btnDepartureBoard");
 			this.btnDepartureBoard.BackColor = System.Drawing.Color.White;
 			this.btnDepartureBoard.Cursor = System.Windows.Forms.Cursors.Hand;
+			resources.ApplyResources(this.btnDepartureBoard, "btnDepartureBoard");
 			this.btnDepartureBoard.Name = "btnDepartureBoard";
 			this.btnDepartureBoard.UseVisualStyleBackColor = false;
 			this.btnDepartureBoard.Click += new System.EventHandler(this.OnClickAbfahrtTafel);
@@ -209,26 +208,26 @@
 			// 
 			// btnClose
 			// 
-			resources.ApplyResources(this.btnClose, "btnClose");
 			this.btnClose.BackColor = System.Drawing.Color.White;
+			resources.ApplyResources(this.btnClose, "btnClose");
 			this.btnClose.Name = "btnClose";
 			this.btnClose.UseVisualStyleBackColor = false;
 			this.btnClose.Click += new System.EventHandler(this.OnClickClose);
 			// 
 			// btnReverseStations
 			// 
-			resources.ApplyResources(this.btnReverseStations, "btnReverseStations");
 			this.btnReverseStations.BackColor = System.Drawing.Color.White;
 			this.btnReverseStations.BackgroundImage = global::Loesung_Projekt_318.Properties.Resources.reverse;
+			resources.ApplyResources(this.btnReverseStations, "btnReverseStations");
 			this.btnReverseStations.Name = "btnReverseStations";
 			this.btnReverseStations.UseVisualStyleBackColor = false;
 			this.btnReverseStations.Click += new System.EventHandler(this.OnReverseClick);
 			// 
 			// btnMail
 			// 
-			resources.ApplyResources(this.btnMail, "btnMail");
 			this.btnMail.BackColor = System.Drawing.SystemColors.ControlLightLight;
 			this.btnMail.BackgroundImage = global::Loesung_Projekt_318.Properties.Resources.icons8_secured_letter_100;
+			resources.ApplyResources(this.btnMail, "btnMail");
 			this.btnMail.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnMail.Name = "btnMail";
 			this.btnMail.UseVisualStyleBackColor = false;
@@ -236,8 +235,8 @@
 			// 
 			// btnMap
 			// 
-			resources.ApplyResources(this.btnMap, "btnMap");
 			this.btnMap.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			resources.ApplyResources(this.btnMap, "btnMap");
 			this.btnMap.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnMap.Name = "btnMap";
 			this.btnMap.UseVisualStyleBackColor = false;
@@ -245,18 +244,24 @@
 			// 
 			// btnDeleteStation
 			// 
-			resources.ApplyResources(this.btnDeleteStation, "btnDeleteStation");
 			this.btnDeleteStation.BackColor = System.Drawing.Color.White;
+			resources.ApplyResources(this.btnDeleteStation, "btnDeleteStation");
 			this.btnDeleteStation.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnDeleteStation.Name = "btnDeleteStation";
 			this.btnDeleteStation.UseVisualStyleBackColor = false;
 			this.btnDeleteStation.Click += new System.EventHandler(this.OnClickDelete);
+			// 
+			// lblReminder
+			// 
+			resources.ApplyResources(this.lblReminder, "lblReminder");
+			this.lblReminder.Name = "lblReminder";
 			// 
 			// Form1
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.IndianRed;
+			this.Controls.Add(this.lblReminder);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.lblChange);
 			this.Controls.Add(this.btnReverseStations);
@@ -318,6 +323,7 @@
 		private System.Windows.Forms.Button btnReverseStations;
 		private System.Windows.Forms.Label lblChange;
 		private System.Windows.Forms.Button btnClose;
+		private System.Windows.Forms.Label lblReminder;
 	}
 }
 
