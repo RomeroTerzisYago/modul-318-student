@@ -51,8 +51,8 @@
 			this.lblDelete = new System.Windows.Forms.Label();
 			this.btnDepartureBoard = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.btnReverse = new System.Windows.Forms.Button();
+			this.lblSendEmail = new System.Windows.Forms.Label();
+			this.btnReverseStations = new System.Windows.Forms.Button();
 			this.btnMail = new System.Windows.Forms.Button();
 			this.btnMap = new System.Windows.Forms.Button();
 			this.btnDeleteStation = new System.Windows.Forms.Button();
@@ -127,7 +127,7 @@
 			// 
 			this.lblDatum.AutoSize = true;
 			this.lblDatum.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDatum.Location = new System.Drawing.Point(41, 272);
+			this.lblDatum.Location = new System.Drawing.Point(48, 263);
 			this.lblDatum.Name = "lblDatum";
 			this.lblDatum.Size = new System.Drawing.Size(66, 19);
 			this.lblDatum.TabIndex = 32;
@@ -148,7 +148,7 @@
 			// 
 			this.lblZeit.AutoSize = true;
 			this.lblZeit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblZeit.Location = new System.Drawing.Point(357, 263);
+			this.lblZeit.Location = new System.Drawing.Point(369, 262);
 			this.lblZeit.Name = "lblZeit";
 			this.lblZeit.Size = new System.Drawing.Size(51, 24);
 			this.lblZeit.TabIndex = 40;
@@ -159,7 +159,7 @@
 			this.tpFromTime.Checked = false;
 			this.tpFromTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tpFromTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-			this.tpFromTime.Location = new System.Drawing.Point(414, 260);
+			this.tpFromTime.Location = new System.Drawing.Point(426, 262);
 			this.tpFromTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.tpFromTime.Name = "tpFromTime";
 			this.tpFromTime.ShowUpDown = true;
@@ -242,7 +242,7 @@
 			// 
 			this.lblDelete.AutoSize = true;
 			this.lblDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDelete.Location = new System.Drawing.Point(849, 36);
+			this.lblDelete.Location = new System.Drawing.Point(861, 36);
 			this.lblDelete.Name = "lblDelete";
 			this.lblDelete.Size = new System.Drawing.Size(140, 24);
 			this.lblDelete.TabIndex = 47;
@@ -257,7 +257,7 @@
 			this.btnDepartureBoard.Location = new System.Drawing.Point(414, 350);
 			this.btnDepartureBoard.Margin = new System.Windows.Forms.Padding(4);
 			this.btnDepartureBoard.Name = "btnDepartureBoard";
-			this.btnDepartureBoard.Size = new System.Drawing.Size(149, 47);
+			this.btnDepartureBoard.Size = new System.Drawing.Size(163, 47);
 			this.btnDepartureBoard.TabIndex = 49;
 			this.btnDepartureBoard.Text = "Abfahrtstafel";
 			this.btnDepartureBoard.UseVisualStyleBackColor = false;
@@ -273,27 +273,27 @@
 			this.label1.TabIndex = 51;
 			this.label1.Text = "Ort anzeigen";
 			// 
-			// label2
+			// lblSendEmail
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(849, 223);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(138, 24);
-			this.label2.TabIndex = 52;
-			this.label2.Text = "Email senden";
+			this.lblSendEmail.AutoSize = true;
+			this.lblSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblSendEmail.Location = new System.Drawing.Point(849, 223);
+			this.lblSendEmail.Name = "lblSendEmail";
+			this.lblSendEmail.Size = new System.Drawing.Size(138, 24);
+			this.lblSendEmail.TabIndex = 52;
+			this.lblSendEmail.Text = "Email senden";
 			// 
-			// btnReverse
+			// btnReverseStations
 			// 
-			this.btnReverse.BackColor = System.Drawing.Color.White;
-			this.btnReverse.BackgroundImage = global::Loesung_Projekt_318.Properties.Resources.reverse;
-			this.btnReverse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.btnReverse.Location = new System.Drawing.Point(635, 81);
-			this.btnReverse.Name = "btnReverse";
-			this.btnReverse.Size = new System.Drawing.Size(128, 74);
-			this.btnReverse.TabIndex = 53;
-			this.btnReverse.UseVisualStyleBackColor = false;
-			this.btnReverse.Click += new System.EventHandler(this.OnReverseClick);
+			this.btnReverseStations.BackColor = System.Drawing.Color.White;
+			this.btnReverseStations.BackgroundImage = global::Loesung_Projekt_318.Properties.Resources.reverse;
+			this.btnReverseStations.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+			this.btnReverseStations.Location = new System.Drawing.Point(635, 81);
+			this.btnReverseStations.Name = "btnReverseStations";
+			this.btnReverseStations.Size = new System.Drawing.Size(128, 74);
+			this.btnReverseStations.TabIndex = 53;
+			this.btnReverseStations.UseVisualStyleBackColor = false;
+			this.btnReverseStations.Click += new System.EventHandler(this.OnReverseClick);
 			// 
 			// btnMail
 			// 
@@ -367,8 +367,8 @@
 			this.ClientSize = new System.Drawing.Size(1143, 756);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.lblChange);
-			this.Controls.Add(this.btnReverse);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.btnReverseStations);
+			this.Controls.Add(this.lblSendEmail);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnMail);
 			this.Controls.Add(this.btnDepartureBoard);
@@ -423,8 +423,8 @@
 		private System.Windows.Forms.Button btnDepartureBoard;
 		private System.Windows.Forms.Button btnMail;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button btnReverse;
+		private System.Windows.Forms.Label lblSendEmail;
+		private System.Windows.Forms.Button btnReverseStations;
 		private System.Windows.Forms.Label lblChange;
 		private System.Windows.Forms.Button btnClose;
 	}

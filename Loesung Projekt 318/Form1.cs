@@ -16,7 +16,6 @@ namespace Loesung_Projekt_318
 	{
 		#region Membervariablen
 
-		//Membervariablen
 		List<string> fromStationId = new List<string>();
 		List<Station> stationList = new List<Station>();
 		Transport transport = new Transport();
@@ -81,7 +80,6 @@ namespace Loesung_Projekt_318
 				string FromTausch = cmbFromStation.SelectedItem.ToString();
 				txtFromStation.Text = cmbToStation.SelectedItem.ToString();
 				txtToStation.Text = FromTausch;
-				
 			}
 		}
 
@@ -127,11 +125,14 @@ namespace Loesung_Projekt_318
 			Stations station = transport.GetStations(location);
 			List<string> fromStationList = new List<string>();
 
+			//Für jedes Item im Objekt stion wird in der Liste fromStation eingespeichert
 			foreach (var item in station.StationList)
 			{
 				if (!string.IsNullOrEmpty(item.Name))
 					fromStationList.Add(item.Name);
 			}
+
+			// Jedes element der fromStationList Liste wird im Combobox cmbStation der Funktion GetFromStation gespeichert
 			foreach (var item in fromStationList)
 			{
 				cmbStation.Items.Add(item);
@@ -146,11 +147,13 @@ namespace Loesung_Projekt_318
 			Stations station = transport.GetStations(location);
 			List<string> toStationList = new List<string>();
 
+			//Für jedes Item im Objekt stion wird in der Liste fromStation eingespeichert
 			foreach (var item in station.StationList)
 			{
 				if (!string.IsNullOrEmpty(item.Name))
 					toStationList.Add(item.Name);
 			}
+			// Jedes element der fromStationList Liste wird im Combobox cmbStation der Funktion GetStation gespeichert
 			foreach (var item in toStationList)
 			{
 				cmbStation.Items.Add(item);
@@ -175,6 +178,7 @@ namespace Loesung_Projekt_318
 				return errorListItemView;
 
 			}
+			//Alle verbindungen werden in der listView Liste gespeichert und entsprechend formatiert
 			ListViewItem[] listView = new ListViewItem[ConnectionListView.ConnectionList.Count];
 			for (int i = 0; i < ConnectionListView.ConnectionList.Count; i++)
 			{
@@ -205,6 +209,7 @@ namespace Loesung_Projekt_318
 				errorListView[0].SubItems.Add(e.Message);
 				return errorListView;
 			}
+			//All die Stationen die in der Abfahrtstafel angeyeigt werden sollen, werden im stationListView gespeicher und entsprechend formatiert
 			ListViewItem[] stationListView = new ListViewItem[stationBoard.Entries.Count];
 			int i = 0;
 			foreach(StationBoard item in stationBoard.Entries)
@@ -219,6 +224,8 @@ namespace Loesung_Projekt_318
 		#endregion
 
 		#region Methoden Set und Get für Membervariablen
+
+		//Formatierung der DepartureTime variable und der DepartureDate Variable
 		private void SetDepartureTime()
 		{
 			departureTime = (tpFromTime.Value.Hour) + ":" + tpFromTime.Value.Minute;

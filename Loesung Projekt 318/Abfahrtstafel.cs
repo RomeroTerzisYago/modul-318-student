@@ -26,6 +26,10 @@ namespace Loesung_Projekt_318
 		#endregion
 
 		#region Funktionen
+
+		//All die Stationen die forher mit der Funktion GetStationBoard Funktion fom Form1 gespeichert wurden, werden jetzt im ListView
+		//der Abfahrtstafel angezeigt.
+		//Der Name der Vonstation wird im Label der Abfartstafel angezeigt.
 		public void SetcmbFromStation(string station)
 		{
 			lblFromStation.Text = station;
