@@ -29,7 +29,6 @@ namespace Loesung_Projekt_318
 		public Form1()
 		{
 			InitializeComponent();
-			
 		}
 		#endregion
 
@@ -102,9 +101,9 @@ namespace Loesung_Projekt_318
 		{
 			if (lvConnections.Items.Count != 0)
 			{
-				ListViewItem ItemMail = lvConnections.Items[0];
+				ListViewItem ItemMail = lvConnections.SelectedItems[0];
 				string MailBody = null;
-
+			
 				for (int i = 0; i <= ItemMail.SubItems.Count - 1; i++)
 				{
 					MailBody += ItemMail.SubItems[i].Text + " ";
@@ -114,6 +113,16 @@ namespace Loesung_Projekt_318
 			}
 			else
 				MessageBox.Show("Bitte wählen sie eine Verbindung");
+		}
+
+		//Selektierte Station wird im Textbox eingegeben für Autocomplete modus
+		private void SelectedFromStation(object sender, EventArgs e)
+		{
+			txtFromStation.Text = cmbFromStation.GetItemText(cmbFromStation.SelectedItem);
+		}
+		private void OnSelectedToStation(object sender, EventArgs e)
+		{
+			txtToStation.Text = cmbToStation.GetItemText(cmbToStation.SelectedItem);
 		}
 
 		//Mapabrufen
@@ -246,6 +255,10 @@ namespace Loesung_Projekt_318
 		{
 			departureDate = tpFromDate.Value.Year + "-" + tpFromDate.Value.Month + "-" + tpFromDate.Value.Day;
 		}
+
+
+
+
 		#endregion
 
 		

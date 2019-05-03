@@ -62,9 +62,9 @@
 			// 
 			this.livStationboard.AutoArrange = false;
 			this.livStationboard.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colLine,
-            this.colDeparture,
-            this.colTo});
+			this.colLine,
+			this.colDeparture,
+			this.colTo});
 			resources.ApplyResources(this.livStationboard, "livStationboard");
 			this.livStationboard.Name = "livStationboard";
 			this.livStationboard.UseCompatibleStateImageBehavior = false;

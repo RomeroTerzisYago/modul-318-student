@@ -76,8 +76,10 @@
 			// cmbFromStation
 			// 
 			resources.ApplyResources(this.cmbFromStation, "cmbFromStation");
+			this.cmbFromStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbFromStation.FormattingEnabled = true;
 			this.cmbFromStation.Name = "cmbFromStation";
+			this.cmbFromStation.SelectedIndexChanged += new System.EventHandler(this.SelectedFromStation);
 			// 
 			// txtToStation
 			// 
@@ -88,8 +90,10 @@
 			// cmbToStation
 			// 
 			resources.ApplyResources(this.cmbToStation, "cmbToStation");
+			this.cmbToStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbToStation.FormattingEnabled = true;
 			this.cmbToStation.Name = "cmbToStation";
+			this.cmbToStation.SelectedIndexChanged += new System.EventHandler(this.OnSelectedToStation);
 			// 
 			// lblNachStation
 			// 
@@ -141,12 +145,14 @@
 			// 
 			resources.ApplyResources(this.lvConnections, "lvConnections");
 			this.lvConnections.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.lvConnections.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.lvConnections.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader3,
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5});
+			this.lvConnections.FullRowSelect = true;
 			this.lvConnections.Name = "lvConnections";
 			this.lvConnections.TileSize = new System.Drawing.Size(168, 30);
 			this.lvConnections.UseCompatibleStateImageBehavior = false;

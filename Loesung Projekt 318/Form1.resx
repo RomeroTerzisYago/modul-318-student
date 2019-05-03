@@ -179,8 +179,8 @@
   <data name="lvConnections.Location" type="System.Drawing.Point, System.Drawing">
     <value>58, 483</value>
   </data>
-  <data name="btnSearchForConnections.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt, style=Bold</value>
+  <data name="btnMail.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
   <data name="&gt;&gt;lblZeit.Parent" xml:space="preserve">
     <value>$this</value>
@@ -207,8 +207,8 @@
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
     <value>columnHeader1</value>
   </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Nach</value>
+  <data name="cmbFromStation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 81</value>
   </data>
   <data name="&gt;&gt;btnMail.Name" xml:space="preserve">
     <value>btnMail</value>
@@ -240,11 +240,11 @@
   <data name="lblNachStation.Text" xml:space="preserve">
     <value>Nach: </value>
   </data>
-  <data name="&gt;&gt;lblNachStation.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;txtToStation.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="lblSendEmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="txtFromStation.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -363,11 +363,14 @@
   <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
     <value>columnHeader4</value>
   </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Schliesen</value>
+  </data>
   <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnMail.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="btnMap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 272</value>
   </data>
   <data name="lblSendEmail.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
@@ -637,8 +640,8 @@
   <data name="&gt;&gt;btnDepartureBoard.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Nach</value>
   </data>
   <data name="&gt;&gt;cmbFromStation.Parent" xml:space="preserve">
     <value>$this</value>
@@ -669,9 +672,6 @@
   </data>
   <data name="&gt;&gt;txtFromStation.ZOrder" xml:space="preserve">
     <value>21</value>
-  </data>
-  <data name="cmbToStation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 28</value>
   </data>
   <data name="txtFromStation.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 32</value>
@@ -709,6 +709,9 @@
   <data name="txtToStation.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 138</value>
   </data>
+  <data name="&gt;&gt;lblZeit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="lblDelete.Location" type="System.Drawing.Point, System.Drawing">
     <value>861, 36</value>
   </data>
@@ -721,20 +724,20 @@
   <data name="&gt;&gt;lblZeit.Name" xml:space="preserve">
     <value>lblZeit</value>
   </data>
-  <data name="&gt;&gt;tpFromTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lvConnections.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="btnSearchForConnections.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;lblConnections.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="lblZeit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 24</value>
+  </data>
   <data name="&gt;&gt;transportBindingSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnDeleteStation.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>645, 223</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>
@@ -1042,8 +1045,8 @@
   <data name="tpFromDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="lblSendEmail.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;btnDeleteStation.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>Ankunft</value>
@@ -1056,6 +1059,9 @@
   </data>
   <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
     <value>columnHeader2</value>
+  </data>
+  <data name="lblChange.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
   </data>
   <data name="&gt;&gt;btnMail.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1081,14 +1087,11 @@
   <data name="&gt;&gt;lblVonStation.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;lblVonStation.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblConnections.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblDatum.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1120,11 +1123,8 @@
   <data name="lblZeit.Text" xml:space="preserve">
     <value>Zeit:</value>
   </data>
-  <data name="cmbToStation.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="lblChange.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
+  <data name="cmbToStation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 28</value>
   </data>
   <data name="tpFromDate.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -1134,9 +1134,6 @@
   </data>
   <data name="&gt;&gt;lblDatum.ZOrder" xml:space="preserve">
     <value>16</value>
-  </data>
-  <data name="btnMap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>651, 272</value>
   </data>
   <data name="lblChange.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1153,11 +1150,8 @@
   <data name="columnHeader2.Width" type="System.Int32, mscorlib">
     <value>171</value>
   </data>
-  <data name="&gt;&gt;lblZeit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmbFromStation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 81</value>
+  <data name="&gt;&gt;lblNachStation.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lblChange.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1174,8 +1168,8 @@
   <data name="btnSearchForConnections.Size" type="System.Drawing.Size, System.Drawing">
     <value>219, 47</value>
   </data>
-  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
-    <value>btnClose</value>
+  <data name="&gt;&gt;tpFromTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1195,8 +1189,8 @@
   <data name="lblNachStation.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt, style=Bold</value>
   </data>
-  <data name="btnDepartureBoard.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
+  <data name="&gt;&gt;lblDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1210,8 +1204,8 @@
   <data name="btnDepartureBoard.Text" xml:space="preserve">
     <value>Abfahrtstafel</value>
   </data>
-  <data name="lblZeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 24</value>
+  <data name="lblZeit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblZeit.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -1297,8 +1291,8 @@
   <data name="&gt;&gt;btnSearchForConnections.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="btnClose.Text" xml:space="preserve">
-    <value>Schliesen</value>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
   </data>
   <data name="&gt;&gt;lblDelete.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -1329,9 +1323,6 @@
   </data>
   <data name="&gt;&gt;tpFromDate.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnMap.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblZeit.Location" type="System.Drawing.Point, System.Drawing">
     <value>369, 262</value>
@@ -1378,8 +1369,8 @@
   <data name="columnHeader1.Width" type="System.Int32, mscorlib">
     <value>200</value>
   </data>
-  <data name="&gt;&gt;btnDeleteStation.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="cmbToStation.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
   <data name="&gt;&gt;btnReverseStations.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1399,14 +1390,14 @@
   <data name="&gt;&gt;btnReverseStations.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnDepartureBoard.Name" xml:space="preserve">
-    <value>btnDepartureBoard</value>
+  <data name="&gt;&gt;lvConnections.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;btnReverseStations.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblVonStation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 24</value>
+  <data name="&gt;&gt;btnMap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.8pt, style=Bold</value>
@@ -1414,14 +1405,20 @@
   <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 54</value>
   </data>
-  <data name="lblZeit.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="btnMap.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Zoom</value>
   </data>
+  <data name="&gt;&gt;btnDepartureBoard.Name" xml:space="preserve">
+    <value>btnDepartureBoard</value>
+  </data>
   <data name="&gt;&gt;btnDeleteStation.Name" xml:space="preserve">
     <value>btnDeleteStation</value>
+  </data>
+  <data name="lblVonStation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 24</value>
+  </data>
+  <data name="btnDepartureBoard.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
   </data>
   <data name="&gt;&gt;lblSendEmail.Name" xml:space="preserve">
     <value>lblSendEmail</value>
@@ -1434,6 +1431,9 @@
   </data>
   <data name="columnHeader3.Width" type="System.Int32, mscorlib">
     <value>200</value>
+  </data>
+  <data name="btnDeleteStation.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
   </data>
   <data name="&gt;&gt;lblConnections.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -1462,8 +1462,8 @@
   <data name="&gt;&gt;btnMail.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>645, 223</value>
+  <data name="lblConnections.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
   </data>
   <data name="btnDeleteStation.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 74</value>
