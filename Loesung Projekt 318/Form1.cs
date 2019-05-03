@@ -100,8 +100,20 @@ namespace Loesung_Projekt_318
 		//Senden von Email
 		private void OnClickSendEmail(object sender, EventArgs e)
 		{
-			var url = "mailto:Email@provider.com?Subject=Loesung%20Projekt%20318";
-			Process.Start(url);
+			if (lvConnections.Items.Count != 0)
+			{
+				ListViewItem ItemMail = lvConnections.Items[0];
+				string MailBody = null;
+
+				for (int i = 0; i <= ItemMail.SubItems.Count - 1; i++)
+				{
+					MailBody += ItemMail.SubItems[i].Text + " ";
+				}
+				var url = "mailto:Email@Provider.com?Subjekt=SwissTransport%20APP%202019&body=Verbindung: " + MailBody;
+				Process.Start(url);
+			}
+			else
+				MessageBox.Show("Bitte wählen sie eine Verbindung");
 		}
 
 		//Mapabrufen

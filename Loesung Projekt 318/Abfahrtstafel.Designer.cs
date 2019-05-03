@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Abfahrtstafel));
 			this.lblStation = new System.Windows.Forms.Label();
 			this.lblFromStation = new System.Windows.Forms.Label();
 			this.btnClose = new System.Windows.Forms.Button();
@@ -41,35 +42,19 @@
 			// 
 			this.lblStation.BackColor = System.Drawing.SystemColors.AppWorkspace;
 			this.lblStation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.lblStation.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStation.Location = new System.Drawing.Point(13, 48);
-			this.lblStation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			resources.ApplyResources(this.lblStation, "lblStation");
 			this.lblStation.Name = "lblStation";
-			this.lblStation.Size = new System.Drawing.Size(134, 24);
-			this.lblStation.TabIndex = 40;
-			this.lblStation.Text = "Von Station:";
-			this.lblStation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblFromStation
 			// 
 			this.lblFromStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblFromStation.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblFromStation.Location = new System.Drawing.Point(154, 48);
-			this.lblFromStation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			resources.ApplyResources(this.lblFromStation, "lblFromStation");
 			this.lblFromStation.Name = "lblFromStation";
-			this.lblFromStation.Size = new System.Drawing.Size(298, 25);
-			this.lblFromStation.TabIndex = 39;
-			this.lblFromStation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// btnClose
 			// 
-			this.btnClose.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnClose.Location = new System.Drawing.Point(315, 446);
-			this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+			resources.ApplyResources(this.btnClose, "btnClose");
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(147, 42);
-			this.btnClose.TabIndex = 38;
-			this.btnClose.Text = "Schliesen";
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.OnClickClose);
 			// 
@@ -80,42 +65,34 @@
             this.colLine,
             this.colDeparture,
             this.colTo});
-			this.livStationboard.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.livStationboard.Location = new System.Drawing.Point(13, 90);
-			this.livStationboard.Margin = new System.Windows.Forms.Padding(4);
+			resources.ApplyResources(this.livStationboard, "livStationboard");
 			this.livStationboard.Name = "livStationboard";
-			this.livStationboard.Size = new System.Drawing.Size(439, 331);
-			this.livStationboard.TabIndex = 37;
 			this.livStationboard.UseCompatibleStateImageBehavior = false;
 			this.livStationboard.View = System.Windows.Forms.View.Details;
 			// 
 			// colLine
 			// 
-			this.colLine.Text = "Linie";
-			this.colLine.Width = 50;
+			resources.ApplyResources(this.colLine, "colLine");
 			// 
 			// colDeparture
 			// 
-			this.colDeparture.Text = "Abfahrt Zeit";
-			this.colDeparture.Width = 67;
+			resources.ApplyResources(this.colDeparture, "colDeparture");
 			// 
 			// colTo
 			// 
-			this.colTo.Text = "Bis Station";
-			this.colTo.Width = 358;
+			resources.ApplyResources(this.colTo, "colTo");
 			// 
 			// Abfahrtstafel
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.IndianRed;
-			this.ClientSize = new System.Drawing.Size(504, 501);
 			this.Controls.Add(this.lblStation);
 			this.Controls.Add(this.lblFromStation);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.livStationboard);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "Abfahrtstafel";
-			this.Text = "Abfahrtstafel";
 			this.ResumeLayout(false);
 
 		}
